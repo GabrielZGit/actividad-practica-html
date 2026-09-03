@@ -1,0 +1,122 @@
+body {
+    background-color: #F5F7F6;
+    font-family: Arial, sans-serif;
+    color: #1F2937;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1F6B4F !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #D7E9E0 !important;
+    border-radius: 8px;
+    padding: 8px 16px !important;
+}
+
+.navbar .nav-link:hover {
+    color: white !important;
+    background-color: #2C8A66;
+}
+
+.navbar .nav-link.active {
+    color: white !important;
+    background-color: #3FAE7A;
+    border-bottom: 3px solid #8BE0B5;
+}
+
+/* Contenido general */
+.contenido {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Tarjetas */
+.card {
+    border: 1px solid #D5DDD9;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Login */
+.login-container {
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.login-container .card-body {
+    padding: 40px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #BFCAC4;
+}
+
+.form-control:focus {
+    border-color: #3FAE7A;
+    box-shadow: 0 0 0 0.2rem rgba(63, 174, 122, 0.20);
+}
+
+/* Botón principal */
+.btn-primary {
+    background-color: #3FAE7A;
+    border-color: #3FAE7A;
+}
+
+.btn-primary:hover {
+    background-color: #328E64;
+    border-color: #328E64;
+}
+
+/* Todos los párrafos */
+p {
+    color: #374151;
+}
+
+/* Párrafos con clase */
+.parrafo-especial {
+    color: #21865F;
+}
+
+/* Párrafo con ID */
+#parrafo-unico {
+    color: #C2415D;
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 4px solid #DDF5E8;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Bloque destacado */
+.info-destacada {
+    background-color: #E9F7EF;
+    border-left: 4px solid #3FAE7A;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Etiquetas pequeñas de la página tags */
+.tag-label {
+    display: inline-block;
+    background-color: #DDF5E8;
+    color: #21865F;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: monospace;
+}
