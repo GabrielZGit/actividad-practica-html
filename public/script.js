@@ -3,29 +3,43 @@
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
-
-    loginForm.addEventListener("submit", function(event) {
-
+    loginForm.addEventListener("submit", async function(event) {
         event.preventDefault();
 
-        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-
         const mensaje = document.getElementById("mensajeLogin");
 
-        // Credenciales de ejemplo
-        if (username === "gabriel" && password === "1234") {
+        try {
+            const response = await fetch("http://localhost:4000/login", {
+                method: "POST",
 
-            mensaje.textContent = "Inicio de sesión correcto";
-            mensaje.className = "text-success mt-3";
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-            // Llevar al usuario a la página de perfil
-            window.location.href = "profile.html";
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            });
 
-        } else {
+            const data = await response.json();
 
-            mensaje.textContent = "Usuario o contraseña incorrectos";
-            mensaje.className = "text-danger mt-3";
+            if (response.ok) {
+                mensaje.textContent = "Login correcto";
+                mensaje.className = "text-success text-center mt-3";
+
+                window.location.href = "profile.html";
+
+            } else {
+                mensaje.textContent = data.message;
+                mensaje.className = "text-danger text-center mt-3";
+            }
+
+        } catch (error) {
+            mensaje.textContent = "No se pudo conectar con el servidor";
+            mensaje.className = "text-danger text-center mt-3";
         }
     });
 }
